@@ -3,7 +3,7 @@
         console.table('Hola ' + nombre); // Hola Logan
     }
     var wolverine = {
-        nombre: 'Log',
+        nombre: 'Login',
     };
     saludar(wolverine.nombre);
 })();
