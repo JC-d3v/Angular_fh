@@ -1,0 +1,8 @@
+.bkp/
+redo/
+.tests/
+.demos/
+*.mp4
+*.m4v
+*.zip
+*.rar
