@@ -1,9 +1,12 @@
-(function() {
-    function saludar(nombre) {
-        console.table('Hola ' + nombre); // Hola Logan
+"use strict";
+(function () {
+    var mensaje = 'hola';
+    if (true) {
+        var mensaje_1 = 'mundo';
     }
-    var wolverine = {
-        nombre: 'Login',
-    };
-    saludar(wolverine.nombre);
+    console.log(mensaje);
+    var msg2 = 'tst';
+    console.log(msg2);
+    var tipo = 'cadenas';
+    tipo = '123';
 })();

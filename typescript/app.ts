@@ -1,10 +1,14 @@
 (function () {
-  function saludar(nombre: string) {
-    console.table('Hola ' + nombre); // Hola Logan
+  let mensaje = 'hola';
+  if (true) {
+    let mensaje = 'mundo';
   }
 
-  const wolverine = {
-    nombre: 'Logan',
-  };
-  saludar(wolverine.nombre);
+  console.log(mensaje);
+
+  const msg2 = 'tst';
+  console.log(msg2);
+
+  let tipo = 'cadenas';
+  tipo = '123';
 })();
