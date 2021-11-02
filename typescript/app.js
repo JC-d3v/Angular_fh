@@ -1,12 +1,12 @@
 "use strict";
 (function () {
-    var mensaje = 'hola';
+    let mensaje = 'hola';
     if (true) {
-        var mensaje_1 = 'mundo';
+        let mensaje = 'mundo';
     }
     console.log(mensaje);
-    var msg2 = 'tst';
+    const msg2 = 'tst';
     console.log(msg2);
-    var tipo = 'cadenas';
+    let tipo = 'cadenas';
     tipo = '123';
 })();
