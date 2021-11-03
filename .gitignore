@@ -6,3 +6,8 @@ redo/
 *.m4v
 *.zip
 *.rar
+
+
+node_modules/
+
+dist/
