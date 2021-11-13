@@ -4,19 +4,33 @@
 </h1>
 <hr />
 
-<div class="row-cols-md-3 animated fadeIn">
-  <div class="card">
-    <img src="../../../assets/img/aquaman.png" class="card-img-top" alt="..." />
+<div class="row container-fluid animated fadeIn">
+  <!-- TIP: llamada a *ngfor-->
+  <div
+    class="card col-3 animated fadeIn"
+    *ngFor="let heroe of heroes; let i = index"
+  >
+    <!-- <img src="../../../assets/img/aquaman.png" class="card-img-top" alt="..." /> -->
+
+    <!-- TIP: llamada a atributo img modo1 usa llaves en el campo-->
+    <!-- <img src="{{ heroe.img }}" class="card-img-top" alt="..." /> -->
+
+    <!-- TIP: llamada a atributo img modo2 usa corchetes en el atributo del tag-->
+    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
     <div class="card-block d-grid">
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title">{{ heroe.nombre }}</h4>
       <p class="card-text">
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
+        {{ heroe.bio }}
       </p>
       <p class="card-text">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">
+          fecha de aparicion: {{ heroe.aparicion }}
+        </small>
       </p>
-      <button type="button" class="btn btn-primary">Mas info...</button>
+      <!-- <button type="button" class="btn btn-primary">Mas info...</button> -->
+      <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary" href="#">
+        ver mas...
+      </a>
     </div>
   </div>
 </div>
