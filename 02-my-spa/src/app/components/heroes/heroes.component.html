@@ -5,15 +5,20 @@
 <hr />
 
 <div class="row container-fluid animated fadeIn">
-  <!-- TIP: llamada a *ngfor-->
+  <!-- TIP: llamada a *ngfor para generar las tarjetas-->
+  <!-- TIP: let i = index para generar variable de indice-->
   <div
     class="card col-3 animated fadeIn"
     *ngFor="let heroe of heroes; let i = index"
   >
-    <!-- <img src="../../../assets/img/aquaman.png" class="card-img-top" alt="..." /> -->
+    <!-- <img src="../../../assets/aquaman.png" class="card-img-top" alt="test1" /> -->
 
     <!-- TIP: llamada a atributo img modo1 usa llaves en el campo-->
-    <!-- <img src="{{ heroe.img }}" class="card-img-top" alt="..." /> -->
+    <!-- <img
+      src="{{ heroe.img }}"
+      class="card-img-top"
+      alt=" {{ heroe.nombre }} "
+    /> -->
 
     <!-- TIP: llamada a atributo img modo2 usa corchetes en el atributo del tag-->
     <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
@@ -28,6 +33,7 @@
         </small>
       </p>
       <!-- <button type="button" class="btn btn-primary">Mas info...</button> -->
+      <!-- TIP: navega a traves  del link al componente heroe indicando el indice del array-->
       <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary" href="#">
         ver mas...
       </a>

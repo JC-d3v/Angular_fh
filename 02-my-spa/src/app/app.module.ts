@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes';
 
 // servicios
-import { HeroesService } from './services/herores.service';
+import { HeroesService } from './services/heroes.service';
 
 
 //Componentes
