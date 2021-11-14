@@ -1,0 +1,26 @@
+<h1 class="animated fadeIn">
+  BUSCADOR DE Heroes
+  <small> termino </small>
+</h1>
+<hr />
+<div class="row container-fluid animated fadeIn">
+  <div
+    class="card col-4 animated fadeIn"
+    *ngFor="let heroe of heroes; let i = index"
+  >
+    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
+    <div class="card-block d-grid">
+      <h4 class="card-title">{{ heroe.nombre | uppercase }}</h4>
+      <p class="card-text">
+        {{ heroe.bio }}
+      </p>
+      <p class="card-text">
+        <small class="text-muted">
+          fecha de aparicion: {{ heroe.aparicion | date: "y" }}
+        </small>
+      </p>
+      <!-- <button class="btn btn-primary" (click)="verHeroe(i)">ver mas ...</button> -->
+      <button class="btn btn-primary">ver mas ...</button>
+    </div>
+  </div>
+</div>

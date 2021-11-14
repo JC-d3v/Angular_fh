@@ -23,13 +23,13 @@
     <!-- TIP: llamada a atributo img modo2 usa corchetes en el atributo del tag-->
     <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
     <div class="card-block d-grid">
-      <h4 class="card-title">{{ heroe.nombre }}</h4>
+      <h4 class="card-title">{{ heroe.nombre | uppercase }}</h4>
       <p class="card-text">
         {{ heroe.bio }}
       </p>
       <p class="card-text">
         <small class="text-muted">
-          fecha de aparicion: {{ heroe.aparicion }}
+          fecha de aparicion: {{ heroe.aparicion | date: 'y' }}
         </small>
       </p>
       <!-- TIP: modo 1 navega a componente-->

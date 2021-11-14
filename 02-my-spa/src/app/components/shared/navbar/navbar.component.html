@@ -44,13 +44,21 @@
         </li>
       </ul>
       <form class="d-flex">
+        <!-- TIP: capturamos la presion de tecla enter y usamos la funcion buscar heroe (definida en el componente.navbar)-->
         <input
           class="form-control me-2"
           type="search"
-          placeholder="Search"
-          aria-label="Search"
+          placeholder="Buscar Heroes"
+          (keyup.enter)="buscarHeroe(buscarTexto.value)"
+          #buscarTexto
         />
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button
+          (click)="buscarHeroe(buscarTexto.value)"
+          class="btn btn-outline-success"
+          type="button"
+        >
+          Buscar
+        </button>
       </form>
     </div>
   </div>

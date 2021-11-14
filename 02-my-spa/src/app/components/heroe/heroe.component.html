@@ -1,7 +1,7 @@
 <div class="container animated fadeIn">
   <h2 class="card-text">
-    {{ heroe.nombre }}
-    <small class="text-muted">{{ heroe.aparicion }}</small>
+    {{ heroe.nombre | uppercase }}
+    <small class="text-muted">({{ heroe.aparicion | date: 'y' }})</small>
   </h2>
 
   <div class="card mb-3" style="max-width: 540px;">
