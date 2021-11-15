@@ -1,0 +1,17 @@
+<div class="card col-4 animated fadeIn">
+  <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
+  <div class="card-block d-grid">
+    <h4 class="card-title">{{ heroe.nombre | uppercase }}</h4>
+    <p class="card-text">
+      {{ heroe.bio }}
+    </p>
+    <p class="card-text">
+      <small class="text-muted">
+        fecha de aparicion: {{ heroe.aparicion | date: "y" }}
+      </small>
+    </p>
+    <button (click)="verHeroe()" type="button" class="btn btn-primary">
+      ver mas ...
+    </button>
+  </div>
+</div>

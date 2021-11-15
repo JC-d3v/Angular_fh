@@ -5,39 +5,11 @@
 <hr />
 
 <div class="row container-fluid animated fadeIn">
-  <!-- TIP: llamada a *ngfor para generar las tarjetas-->
-  <!-- TIP: let i = index para generar variable de indice-->
-  <div
-    class="card col-4 animated fadeIn"
-    *ngFor="let heroe of heroes; let i = index"
-  >
-    <!-- <img src="../../../assets/aquaman.png" class="card-img-top" alt="test1" /> -->
-
-    <!-- TIP: llamada a atributo img modo1 usa llaves en el campo-->
-    <!-- <img
-      src="{{ heroe.img }}"
-      class="card-img-top"
-      alt=" {{ heroe.nombre }} "
-    /> -->
-
-    <!-- TIP: llamada a atributo img modo2 usa corchetes en el atributo del tag-->
-    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
-    <div class="card-block d-grid">
-      <h4 class="card-title">{{ heroe.nombre | uppercase }}</h4>
-      <p class="card-text">
-        {{ heroe.bio }}
-      </p>
-      <p class="card-text">
-        <small class="text-muted">
-          fecha de aparicion: {{ heroe.aparicion | date: 'y' }}
-        </small>
-      </p>
-      <!-- TIP: modo 1 navega a componente-->
-      <button class="btn btn-primary" (click)="verHeroe(i)">ver mas ...</button>
-      <!-- TIP: modo 2navega a traves  del link al componente heroe indicando el indice del array-->
-      <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary" href="#">
-        ver mas...
-      </a> -->
-    </div>
-  </div>
+  <!-- TIP: [heroe] la variable que viene de nuestro -->
+  <app-heroe-tarjeta
+    (hereoSeleccionado)="verHeroe($event)"
+    [heroe]="foo"
+    [indice]="i"
+    *ngFor="let foo of heroes; let i = index"
+  ></app-heroe-tarjeta>
 </div>
