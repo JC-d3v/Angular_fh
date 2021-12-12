@@ -2,15 +2,11 @@
 <hr />
 <div class="row">
   <div class="col">
-    <h3>Personajes</h3>
-    <hr />
-    <ul>
-      <li>Krilin - 700</li>
-      <li>Goku - 15000</li>
-      <li>Vegueta - 8000</li>
-    </ul>
+    <!-- TIP: @input   [from personajes.comp...ts]="from main-page.comp...ts "-->
+    <app-personajes></app-personajes>
   </div>
   <div class="col">
+<<<<<<< HEAD
     <h3>agregar</h3>
     <hr />
     <form (ngSubmit)="agregar()">
@@ -18,5 +14,9 @@
       <input type="number" placeholder="Poder" />
       <button type="submit">Agregar</button>
     </form>
+=======
+    <!-- TIP: onNuevoPersonaje    ($event) -->
+    <app-agregar [nuevo]="nuevo"></app-agregar>
+>>>>>>> 47778ad81528b6f6b059a992bec4be8da7243c85
   </div>
 </div>
