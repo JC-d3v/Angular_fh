@@ -14,4 +14,9 @@ export class MainPageComponent {
   agregar() {
     console.log(`msg`)
   }
+
+  nuevo : Personaje {
+    nombre :''
+    poder:0
+  }
 }
