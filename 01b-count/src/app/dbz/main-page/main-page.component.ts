@@ -15,12 +15,7 @@ export class MainPageComponent {
     poder: 100
   }
 
-
   constructor() {
   }
 
-  nuevo : Personaje {
-    nombre :''
-    poder:0
-  }
 }

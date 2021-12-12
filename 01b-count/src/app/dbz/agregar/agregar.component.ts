@@ -15,6 +15,8 @@ export class AgregarComponent {
     poder: 150000
   }
 
+  @Output() onNuevoPerosnaje: EventEmitter<Personaje> = new EventEmitter
+
   constructor(private dbzService: DbzService) {
 
   }
