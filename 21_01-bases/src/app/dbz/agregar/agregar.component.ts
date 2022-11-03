@@ -22,7 +22,6 @@ export class AgregarComponent {
 
     console.log(`nuevo personaje on agregar.c.ts-- `, this.nuevo);
     this.onNuevoPersonaje.emit(this.nuevo);
-
     this.nuevo = {
       nombre: '',
       poder: 0
