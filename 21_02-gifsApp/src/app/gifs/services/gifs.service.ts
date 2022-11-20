@@ -5,23 +5,23 @@ import { Gif, SearchGifsResponse } from '../interfaces/gifs.interface';
 @Injectable({
   providedIn: 'root'
 })
+
 export class GifsService {
 
   private _apiKey: string = 'mWUk3cu7HhdiZ8R5KUPNpbRCJiBDTgIY';
+
   private _historial: string[] = [];
 
   public resultados: Gif[] = [];
 
   get historial() {
     return [...this._historial];
-
   }
+
   constructor(private _http: HttpClient) {
     this._historial = JSON.parse(localStorage.getItem('historial')!) || [];
     this.resultados = JSON.parse(localStorage.getItem('resultados')!) || [];
   }
-
-
 
   buscarGifs(query: string) {
 
@@ -32,7 +32,6 @@ export class GifsService {
       this._historial = this._historial.splice(0, 10);
 
       localStorage.setItem('historial', JSON.stringify(this._historial));
-
     }
 
     this._http.get<SearchGifsResponse>(`https://api.giphy.com/v1/gifs/search?api_key=mWUk3cu7HhdiZ8R5KUPNpbRCJiBDTgIY&q=${query}&limit=10`)

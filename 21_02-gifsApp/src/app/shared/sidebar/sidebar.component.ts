@@ -4,11 +4,16 @@ import { GifsService } from '../../gifs/services/gifs.service';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html'
 })
+
 export class SidebarComponent implements OnInit {
+
+  buscar(argumento: string) {
+    this.gifsService.buscarGifs(argumento)
+  };
 
   get historial() {
     return this.gifsService.historial;
-  }
+  };
 
 
   constructor(private gifsService: GifsService) { }
