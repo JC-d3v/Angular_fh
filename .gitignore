@@ -1,7 +1,9 @@
-.bkp/
+bkp/
 redo/
-.tests/
-.demos/
+tests/
+demos/
+tmp/
+.angular/
 *.mp4
 *.m4v
 *.zip
